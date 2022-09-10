@@ -1,0 +1,14 @@
+# File used only for development purposes
+
+folder-structure:
+  foo1:
+    bar1:
+    bar2:
+
+  foo2:
+    bar1:
+    bar2:
+
+  foo3:
+    bar1:
+    bar2:
