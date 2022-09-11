@@ -1,13 +1,24 @@
 # File used only for development purposes
 
+# Main directories
+directories: 
+  - EN
+  - ES
+  - PB
+  - CVC
+  - HC
+
+# Subdirectories for each main directory
 folder-structure:
   foo1:
-    bar1:
-    bar2:
-
+  
   foo2:
     bar1:
+      baz1:
+      baz2:
+
     bar2:
+      baz1:
 
   foo3:
     bar1:

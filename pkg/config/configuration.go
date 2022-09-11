@@ -1,19 +1,20 @@
 package config
 
 import (
-    "errors"
-    "gopkg.in/yaml.v3"
     "os"
-    "github.com/rwcosta/folderz/pkg/utils"
+    "path/filepath"
+
+    "gopkg.in/yaml.v3"
 )
 
 // Function to read YAML file
-func GetConfig(path ...string) (Config, error) {
-    if len(path) <= 0 {
-        return Config{}, errors.New("config YAML file not specified")
+func GetConfig() (Config, error) {
+    ex, err := os.Executable()
+    if err != nil {
+        panic(err)
     }
 
-    yamlFile, err := os.ReadFile(utils.MakeItYAML(path[0]))
+    yamlFile, err := os.ReadFile(filepath.Dir(ex) + "/structure.yml")
     if err != nil {
         return Config{}, err
     }
